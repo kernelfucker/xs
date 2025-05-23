@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
 	int w, h, ch;
 	unsigned char *data = stbi_load(argv[1], &w, &h, &ch, 4);
 	if(!data){
-		printf("could not image load %s\n", stbi_failure_reason());
+		printf("couldnt not image load %s\n", stbi_failure_reason());
 		return 1;
 	}
 
