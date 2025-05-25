@@ -1,5 +1,5 @@
 # xs
-just a image viewer, but thats so minimal
+minimal image viewer
 
 # compile, usage and example image
 $ clang xs.c -o xs -Ilib sdl2-config --cflags --libs -lm
