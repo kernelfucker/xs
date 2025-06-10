@@ -2,7 +2,7 @@
 minimal image viewer
 
 # compile, usage and example image
-$ clang xs.c -o xs -Ilib `sdl2-config --cflags --libs` -lm
+$ clang xs.c -o xs -Ilib ``sdl2-config --cflags --libs`` -lm
 
 $ ./xs image.png
 
