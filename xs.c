@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]){
 	if(argc < 2){
-		printf("usage: %s image(.png, .jpeg etc..)\n", argv[1]);
+		printf("usage: %s image(.png, .jpeg etc..)\n", argv[0]);
 		return 1;
 	}
 
