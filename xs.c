@@ -1,12 +1,33 @@
+/* See LICENSE file for license details */
+/* xs - minimal image viewer */
 #define STB_IMAGE_IMPLEMENTATION
 #include <stdio.h>
 #include <SDL2/SDL.h>
 #include "lib/stb_image.h"
 
+#define version "0.2"
+
+void phelp(const char *s){
+	printf("usage: %s image(.png, .jpeg etc..)\n", s);
+	printf("options:\n");
+	printf("  --version	show version information\n");
+	printf("  --help	display this\n");
+}	
+
 int main(int argc, char *argv[]){
 	if(argc < 2){
 		printf("usage: %s image(.png, .jpeg etc..)\n", argv[0]);
 		return 1;
+	}
+
+	if(strcmp(argv[1], "--help") == 0){
+		phelp(argv[0]);
+		return 0;
+	}
+
+	if(strcmp(argv[1], "--version") == 0){
+		printf("%s\n", version);
+		return 0;
 	}
 
 	int w, h, ch;
