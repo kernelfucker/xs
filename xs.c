@@ -43,7 +43,7 @@ int main(int argc, char *argv[]){
 		return 1;
 	}
 
-	SDL_Window *win = SDL_CreateWindow("xs", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, 0);
+	SDL_Window *win = SDL_CreateWindow("xs", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, SDL_WINDOW_RESIZABLE);
 	SDL_Renderer *ren = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
 	SDL_Texture *tex = SDL_CreateTexture(ren, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_STATIC, w, h);
 	SDL_UpdateTexture(tex, NULL, data, w * 4);
