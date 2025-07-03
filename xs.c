@@ -8,25 +8,26 @@
 #define version "0.2"
 
 void phelp(const char *s){
-	printf("usage: %s image(.png, .jpeg etc..)\n", s);
+	printf("usage: %s [file]\n", s);
 	printf("options:\n");
-	printf("  --version	show version information\n");
-	printf("  --help	display this\n");
+	printf("  -v	show version information\n");
+	printf("  -h	display this\n");
 }	
 
 int main(int argc, char *argv[]){
 	if(argc < 2){
-		printf("usage: %s image(.png, .jpeg etc..)\n", argv[0]);
+		printf("usage: %s [file]\n", argv[0]);
+		printf("try '%s -h' for more information\n", argv[0]);
 		return 1;
 	}
 
-	if(strcmp(argv[1], "--help") == 0){
+	if(strcmp(argv[1], "-h") == 0){
 		phelp(argv[0]);
 		return 0;
 	}
 
-	if(strcmp(argv[1], "--version") == 0){
-		printf("%s\n", version);
+	if(strcmp(argv[1], "-v") == 0){
+		printf("xs-%s\n", version);
 		return 0;
 	}
 
